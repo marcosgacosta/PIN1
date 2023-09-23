@@ -28,6 +28,7 @@ pipeline {
    stage('Deploy Image') {
       steps{
         sh '''
+        docker login -u admin -p hola1234 localhost:8083
         docker tag testapp localhost:8083/repository/marcosdocker/testapp:latest
         docker push localhost:8083/repository/marcosdocker/testapp:latest
         '''
