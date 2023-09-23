@@ -28,8 +28,8 @@ pipeline {
    stage('Deploy Image') {
       steps{
         sh '''
-        docker tag testapp 10.0.0.101:8081/repository/marcosdocker/testapp:latest
-        docker push 10.0.0.101:8081/repository/marcosdocker/testapp:latest
+        docker tag testapp localhost:8083/repository/marcosdocker/testapp:latest
+        docker push localhost:8083/repository/marcosdocker/testapp:latestad
         '''
         }
       }
