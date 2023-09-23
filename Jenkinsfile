@@ -29,7 +29,7 @@ pipeline {
       steps{
         sh '''
         docker tag testapp localhost:8083/repository/marcosdocker/testapp:latest
-        docker push localhost:8083/repository/marcosdocker/testapp:latestad
+        docker push localhost:8083/repository/marcosdocker/testapp:latest
         '''
         }
       }
