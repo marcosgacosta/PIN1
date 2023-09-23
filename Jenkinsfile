@@ -1,5 +1,7 @@
 pipeline {
-  agent any
+  agent {
+         label 'primary'
+    }
 
   options {
     timeout(time: 2, unit: 'MINUTES')
@@ -12,7 +14,7 @@ pipeline {
    stage('Building image') {
       steps{
           sh '''
-          cd webapp
+          //cd webapp
           docker build -t testapp .
              '''  
         }
