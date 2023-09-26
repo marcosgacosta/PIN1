@@ -22,7 +22,7 @@ pipeline {
   
     stage('Run tests') {
       steps {
-        sh "docker run -d -rm -p 3000:3000 testapp npm test"
+        sh "docker run -d --rm -p 3000:3000 testapp npm test"
       }
     }
    stage('Deploy Image') {
